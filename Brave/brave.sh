@@ -3,26 +3,42 @@
 sudo mkdir -p /etc/brave/policies/managed
 
 printf '%s\n' '{
-  "BraveRewardsDisabled": true,
-  "BraveWalletDisabled": true,
-  "BraveVPNDisabled": 1,
-  "BraveAIChatEnabled": false,
-  "BraveTalkDisabled": true,
-  "TorDisabled": true,
+    "BraveRewardsDisabled": true,
+    "BraveWalletDisabled": true,
+    "BraveVPNDisabled": 1,
+    "BraveAIChatEnabled": false,
+    "BraveTalkDisabled": true,
+    "BraveNewsDisabled": true,
+    "BravePlaylistEnabled": false,
+    "BraveWaybackMachineEnabled": false,
+    "BraveSpeedreaderEnabled": false,
 
-  "PasswordManagerEnabled": false,
-  "AutofillCreditCardEnabled": false,
-  "AutofillAddressEnabled": false,
+    "BraveP3AEnabled": false,
+    "BraveStatsPingEnabled": false,
+    "BraveWebDiscoveryEnabled": false,
+    "MetricsReportingEnabled": false,
 
-  "EnableMediaRouter": false,
+    "PasswordManagerEnabled": false,
+    "PasswordManagerPasskeysEnabled": false,
+    "PasswordLeakDetectionEnabled": false,
+    "AutofillAddressEnabled": false,
+    "AutofillCreditCardEnabled": false,
+    "PaymentMethodQueryEnabled": false,
 
-  "BraveP3AEnabled": false,
-  "BraveStatsPingEnabled": false,
-  "MetricsReportingEnabled": false,
-  "BraveWebDiscoveryEnabled": false,
+    "EnableMediaRouter": false,
+    "ShowCastIconInToolbar": false,
+    "ShowCastSessionsStartedByOtherDevices": false,
 
-  "DnsOverHttpsMode": "secure",
-  "DnsOverHttpsTemplates": "https://base.dns.mullvad.net/dns-query",
+    "DefaultBraveAdblockSetting": 2,
+    "DefaultBraveHttpsUpgradeSetting": 2,
+    "HttpsOnlyMode": "force_enabled",
+    "DefaultBraveFingerprintingV2Setting": 3,
+    "DefaultCookiesSetting": 4,
+    "DefaultBraveRemember1PStorageSetting": 2,
 
-  "DefaultJavaScriptJitSetting": 2
-}' | sudo tee /etc/brave/policies/managed/brave-policies.json > /dev/null
+    "DnsOverHttpsMode": "secure",
+    "DnsOverHttpsTemplates": "https://base.dns.mullvad.net/dns-query",
+
+    "TorDisabled": true,
+    "DefaultJavaScriptJitSetting": 2
+  }' | sudo tee /etc/brave/policies/managed/brave-policies.json > /dev/null
